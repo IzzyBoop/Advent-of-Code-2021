@@ -5,7 +5,8 @@ tally = 0
 
 with open('1/input.txt') as f:
     for line in f:
-        currentDepth = line
+        intLine = int(line)
+        currentDepth = intLine
         if previousVal == 0:
             previousVal = currentDepth
             continue
@@ -14,4 +15,4 @@ with open('1/input.txt') as f:
             tally += 1
         previousVal = currentDepth
 
-print(tally+1)
+print(tally)
