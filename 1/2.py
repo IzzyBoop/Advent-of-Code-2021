@@ -4,11 +4,11 @@ countyBoi = 0
 
 fileObj = open('1/input.txt', "r")
 list = fileObj.read().splitlines()
-list = [int(i) for i in list]
+list = [int(i) for i in list] #oh yes thats sum good good
 fileObj.close()
 
 windowSize = 3
-i = windowSize #current array position (starting at 3)
+i = windowSize
 while i < (len(list)):
     previousVal = list[i-1]+list[i-2]+list[i-3]
     currentVal = list[i]+list[i-1]+list[i-2]
