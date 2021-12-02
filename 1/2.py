@@ -3,15 +3,15 @@
 countyBoi = 0
 
 fileObj = open('1/input.txt', "r")
-list = fileObj.read().splitlines()
-list = [int(i) for i in list] #oh yes thats sum good good
+listyBoi = fileObj.read().splitlines()
+listyBoi = [int(i) for i in listyBoi] #oh yes thats sum good good
 fileObj.close()
 
 windowSize = 3
 i = windowSize
-while i < (len(list)):
-    previousVal = list[i-1]+list[i-2]+list[i-3]
-    currentVal = list[i]+list[i-1]+list[i-2]
+while i < (len(listyBoi)):
+    previousVal = listyBoi[i-1]+listyBoi[i-2]+listyBoi[i-3]
+    currentVal = listyBoi[i]+listyBoi[i-1]+listyBoi[i-2]
     if currentVal > previousVal:
         countyBoi += 1
     i += 1
