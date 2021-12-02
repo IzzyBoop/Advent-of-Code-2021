@@ -3,14 +3,15 @@
 countyBoi = 0
 
 fileObj = open('1/input.txt', "r")
-array = fileObj.read().splitlines()
+list = fileObj.read().splitlines()
+list = [int(i) for i in list]
 fileObj.close()
 
 windowSize = 3
 i = windowSize #current array position (starting at 3)
-while i < (len(array)):
-    previousVal = int(array[i-1])+int(array[i-2])+int(array[i-3])
-    currentVal = int(array[i])+int(array[i-1])+int(array[i-2])
+while i < (len(list)):
+    previousVal = list[i-1]+list[i-2]+list[i-3]
+    currentVal = list[i]+list[i-1]+list[i-2]
     if currentVal > previousVal:
         countyBoi += 1
     i += 1
