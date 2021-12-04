@@ -17,10 +17,8 @@ k = 0
 while k < bitlength:
     for f in listyBoi:
         binArray = []
-
         for i in f:
             binArray.append(i)
-
         bit[k] += int(binArray[k])
     k += 1
 
