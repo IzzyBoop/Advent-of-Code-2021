@@ -16,7 +16,7 @@ for f in listyBoi:
         horizontalPos += amount
     elif direction == "down":
         depth += amount
-    elif direction == "up":
+    else:
         depth -= amount
 
 print(horizontalPos*depth)
