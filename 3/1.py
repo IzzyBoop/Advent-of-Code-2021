@@ -13,24 +13,16 @@ bitlength = 12
 bit = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 # add up the amount of bits in each column that are 1's. 
-for f in listyBoi:
-    binArray = []
+k = 0
+while k < bitlength:
+    for f in listyBoi:
+        binArray = []
 
-    for i in f:
-        binArray.append(i)
+        for i in f:
+            binArray.append(i)
 
-    bit[0] += int(binArray[0])
-    bit[1] += int(binArray[1])
-    bit[2] += int(binArray[2])
-    bit[3] += int(binArray[3])
-    bit[4] += int(binArray[4])
-    bit[5] += int(binArray[5])
-    bit[6] += int(binArray[6])
-    bit[7] += int(binArray[7])
-    bit[8] += int(binArray[8])
-    bit[9] += int(binArray[9])
-    bit[10] += int(binArray[10])
-    bit[11] += int(binArray[11])
+        bit[k] += int(binArray[k])
+    k += 1
 
 # the input file has 1000 entries. So the majority will be any column with 501 bits as either 1 or 0. 
 # I can find the majority by dividing the amount of 1's in each column by 1000
